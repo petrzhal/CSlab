@@ -42,7 +42,9 @@ internal class Program
 
             Console.Write("Введите статус оплаты (оплачено или не оплачено): ");
             var strStatus = Console.ReadLine();
-            var status = strStatus == "оплачено" ? PaymentStatus.Paid : PaymentStatus.NotPaid;
+            var status = strStatus.Equals("оплачено") 
+                ? PaymentStatus.Paid 
+                : PaymentStatus.NotPaid;
 
             Console.Write("Введите потребленное кол-во воды: ");
             var usedWater = Input();

@@ -48,8 +48,8 @@
         }
         public static Hms GetInstance()
         {
-            instance ??= new Hms();
-            return instance;
+             return instance ??= new Hms();
+            //return instance;
         }
     }
 }
